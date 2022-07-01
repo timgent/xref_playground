@@ -49,7 +49,7 @@ lib/deps_test/deps_test.ex
 └── lib/deps_test/a.ex (compile)
 ```
 
-## What would help?
+## What would help?
 
 I may be missing some context on how to use the xref tool, in which case advice for how to more easily understand and trace
 back dependencies would be great.

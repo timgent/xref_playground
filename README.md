@@ -25,7 +25,6 @@ as possible.
 We can identify all the compile time dependencies on `DepsTest.D` easily:
 
 ```
-mix xref graph --sink lib/deps_test/d.ex --label compile
 ➜  xref_playground git:(main) mix xref graph --sink lib/deps_test/d.ex --label compile
 lib/deps_test/deps_test.ex
 └── lib/deps_test/a.ex (compile)
@@ -59,8 +58,7 @@ If I'm not though, I'd like to propose that when looking at dependencies with a 
 the output should include a graph showing how those indirect dependencies link back to the sink. For example:
 
 ```
-mix xref graph --sink lib/deps_test/d.ex --label compile
-➜  xref_playground git:(main) mix xref graph --sink lib/deps_test/d.ex --label compile
+➜  xref_playground git:(main) mix xref graph --sink lib/deps_test/d.ex --label compile --trace-to-sink
 lib/deps_test/deps_test.ex
 └── lib/deps_test/a.ex (compile)
   └── lib/deps_test/b.ex

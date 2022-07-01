@@ -1,3 +1,4 @@
 defmodule DepsTest do
-  def cow_goes, do: DepsTest.A.moo()
+  @a DepsTest.A.moo()
+  def cow_goes, do: @a
 end
